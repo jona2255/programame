@@ -7,19 +7,12 @@ public class Problem100 {
         Scanner in = new Scanner(System.in);
 
         int ass = in.nextInt();
-        int[] myArray;
-        int resultado;
-        int numRestado;
 
-        myArray = new int[ass];
-
-
-
-        for (int arr = 0; arr < myArray.length; arr++) {
+        for (int arr = 0; arr < ass; arr++) {
 
             int numero = in.nextInt() ;
             int[] digitos = {0,0,0,0};
-            resultado=0;
+            int resultado = 0;
 
             if(numero==6174){
                 System.out.println("0");
@@ -27,8 +20,8 @@ public class Problem100 {
                 System.out.println("8");
             } else{
                 while (numero != 6174){
-                    String Menor = "";
-                    String Mayor = "";
+                    StringBuilder Menor = new StringBuilder();
+                    StringBuilder Mayor = new StringBuilder();
                     for (int u = 0; u < digitos.length; u++) {
                         digitos[u] = numero % 10;
                         numero /= 10;
@@ -46,7 +39,7 @@ public class Problem100 {
                         }
                     }
                     for(int a=0; a<=3; a++){
-                        Menor += digitos[a];
+                        Menor.append(digitos[a]);
                     }
 
                     //Ordena de major a menor
@@ -62,14 +55,13 @@ public class Problem100 {
                         }
                     }
                     for(int a=0; a<=3; a++){
-                        Mayor += digitos[a];
+                        Mayor.append(digitos[a]);
                     }
-                    int numMayor = Integer.parseInt(Mayor);
-                    int numMenor = Integer.parseInt(Menor);
+                    int numMayor = Integer.parseInt(Mayor.toString());
+                    int numMenor = Integer.parseInt(Menor.toString());
 
-                    numRestado = numMayor - numMenor;
+                    numero = numMayor - numMenor;
                     resultado = resultado + 1;
-                    numero=numRestado;
                     for(int a=0; a<=3; a++){
                         digitos[a] = 0;
                         a++;
@@ -77,7 +69,6 @@ public class Problem100 {
                 }
                 System.out.println(resultado);
             }
-
 
         }
 
