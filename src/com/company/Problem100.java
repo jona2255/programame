@@ -13,9 +13,7 @@ public class Problem100 {
 
         myArray = new int[ass];
 
-        int arrayFinal=0;
-        String Menor = "";
-        String Mayor = "";
+
 
         for (int arr = 0; arr < myArray.length; arr++) {
 
@@ -29,6 +27,8 @@ public class Problem100 {
                 System.out.println("8");
             } else{
                 while (numero != 6174){
+                    String Menor = "";
+                    String Mayor = "";
                     for (int u = 0; u < digitos.length; u++) {
                         digitos[u] = numero % 10;
                         numero /= 10;
@@ -69,17 +69,11 @@ public class Problem100 {
 
                     numRestado = numMayor - numMenor;
                     resultado = resultado + 1;
-                    Menor = "";
-                    Mayor = "";
                     numero=numRestado;
                     for(int a=0; a<=3; a++){
-                        digitos[arrayFinal] = 0;
-                        arrayFinal = arrayFinal+1;
+                        digitos[a] = 0;
+                        a++;
                     }
-                    for (int ar = 0; ar <=4; ar++) {
-                        arrayFinal=arrayFinal-1;
-                    }
-                    arrayFinal=0;
                 }
                 System.out.println(resultado);
             }
