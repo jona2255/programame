@@ -24,7 +24,7 @@ public class Problem100conFunciones {
 
             if(numero==6174){
                 System.out.println("0");
-            } else if (numero == 0 || numero==1111 || numero == 2222 || numero == 4444 || numero == 5555 || numero == 6666 || numero == 7777 || numero == 8888 || numero == 9999){
+            } else if (numero == 0 || numero==1111 || numero == 2222 ||  numero == 3333 ||numero == 4444 || numero == 5555 || numero == 6666 || numero == 7777 || numero == 8888 || numero == 9999){
                 System.out.println("8");
             } else{
                 while (numero != 6174){
